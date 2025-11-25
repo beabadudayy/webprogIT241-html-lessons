@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f1e7d3; 
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .header {
@@ -23,7 +23,7 @@ body {
 
 .section h2 {
   color: #1e100d; 
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .section ul li {
