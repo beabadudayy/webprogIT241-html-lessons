@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   margin: 0;
   padding: 0;
   background-color: #f1e7d3; 
@@ -22,7 +22,7 @@ body {
 }
 
 .section h2 {
-  color: #4a2f07; 
+  color: #301e03; 
 }
 
 .section ul li {
