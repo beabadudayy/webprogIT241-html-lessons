@@ -1,16 +1,39 @@
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: rgb(78, 51, 0);
-}
- 
-.container div {
-  background-color: #f1f1f1;
-  font-style: normal;
-  width: 200px;
-  margin: 10px;
-  padding: 10px;
-  text-align: center;  
-  font-size: 25px;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1e7d3; 
 }
 
+.header {
+  background-color: #5c3c0d; 
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.section {
+  background-color: #fff7e9; 
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+  color: #4a2f07; 
+}
+
+.section ul li {
+  margin-bottom: 6px;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero img {
+  border-radius: 10px;
+  margin-bottom: 15px;
+  max-width: 90%;
+}
