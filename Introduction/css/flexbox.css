@@ -7,14 +7,14 @@ body {
 }
 
 .header {
-  background-color: #5c3c0d; 
+  background-color: #1d0f0e; 
   padding: 20px;
   text-align: center;
-  color: white;
+  color: #c8af86;
 }
 
 .section {
-  background-color: #fff7e9; 
+  background-color: #987555; 
   margin: 20px;
   padding: 20px;
   border-radius: 8px;
@@ -22,7 +22,7 @@ body {
 }
 
 .section h2 {
-  color: #301e03; 
+  color: #e6d3b3; 
 }
 
 .section ul li {
