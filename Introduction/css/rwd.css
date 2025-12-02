@@ -4,15 +4,28 @@
 
 body {
   font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
   margin: 0;
   background-color: #f1e7d3;
-  font-size: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'menu'
+    'main'
+    'facts'
+    'footer';
+  gap: 10px;
+  background-color: #f1e7d3;
 }
 
 .header {
+  grid-area: header;
   background-color: #1d0f0e;
-  color: #c8af86;
   text-align: center;
+  color: #c8af86;
   padding: 20px;
 }
 
@@ -21,50 +34,81 @@ body {
   margin: 0;
 }
 
-.grid-container {
-  display: grid;
-  gap: 15px;
-  padding: 15px;
-  grid-template-areas:
-    "about"
-    "edu"
-    "course"
-    "exp"
-    "hobbies"
-    "goals";
+.menu {
+  grid-area: menu;
 }
 
-.item {
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #d1b48c;
+  color: #1e100d;
+  border-radius: 5px;
+}
+
+.content {
+  grid-area: main;
   background-color: #d1b48c;
   padding: 20px;
   border-radius: 8px;
   color: #1e100d;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
 
-.about { grid-area: about; }
-.edu { grid-area: edu; }
-.course { grid-area: course; }
-.exp { grid-area: exp; }
-.hobbies { grid-area: hobbies; }
-.goals { grid-area: goals; }
-
-.item h2 {
-  margin-top: 0;
-  font-size: 28px;
+.content h1 {
+  font-size: 30px;
+  margin-bottom: 7px;
 }
 
-/* Large screens (same pattern as your 1st CSS layout) */
-@media (min-width: 900px) {
-  .grid-container {
-    grid-template-areas:
-      "about edu edu"
-      "about course course"
-      "exp hobbies goals";
-    grid-template-columns: 2fr 1fr 1fr;
-  }
+.content ul li {
+  margin-bottom: 5px;
+}
 
-  .item {
-    font-size: 22px;
-  }
+.hero-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.facts {
+  grid-area: facts;
+  background-color: #c8af86;
+  padding: 15px;
+  border-radius: 8px;
+  color: #1e100d;
+}
+
+.facts h2 {
+  font-size: 25px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #1d0f0e;
+  color: #c8af86;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+@media (min-width: 600px) {
+  .header { grid-area: 1 / span 6; }
+  .menu { grid-area: 2 / span 1; }
+  .content { grid-area: 2 / span 4; }
+  .facts { grid-area: 3 / span 6; }
+  .footer { grid-area: 4 / span 6; }
+}
+
+@media (min-width: 768px) {
+  .header { grid-area: 1 / span 6; }
+  .menu { grid-area: 2 / span 1; }
+  .content { grid-area: 2 / span 4; }
+  .facts { grid-area: 2 / span 1; }
+  .footer { grid-area: 3 / span 6; }
 }
