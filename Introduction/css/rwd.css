@@ -4,111 +4,57 @@
 
 body {
   font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
-  margin: 0;
-  background-color: #f1e7d3;
+  font-size: 25px;
+  background-color: #f5e7d2;
+  padding: 10px;
 }
 
 .grid-container {
   display: grid;
+  gap: 15px;
   grid-template-areas:
-    'header'
-    'menu'
-    'main'
-    'facts'
-    'footer';
-  gap: 10px;
-  background-color: #f1e7d3;
+    "about"
+    "education"
+    "course"
+    "experience"
+    "hobbies"
+    "goals";
 }
 
-.header {
-  grid-area: header;
-  background-color: #1d0f0e;
-  text-align: center;
-  color: #c8af86;
-  padding: 20px;
-}
-
-.header h1 {
-  font-size: 35px;
-  margin: 0;
-}
-
-.menu {
-  grid-area: menu;
-}
-
-.menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  padding: 8px;
-  margin-bottom: 7px;
-  background-color: #d1b48c;
-  color: #1e100d;
-  border-radius: 5px;
-}
-
-.content {
-  grid-area: main;
+.box {
   background-color: #d1b48c;
   padding: 20px;
   border-radius: 8px;
-  color: #1e100d;
+  border: 1px solid #b8946b;
 }
 
-.content h1 {
+.box h2 {
   font-size: 30px;
-  margin-bottom: 7px;
+  margin-top: 0;
 }
 
-.content ul li {
-  margin-bottom: 5px;
-}
-
-.hero-img {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.facts {
-  grid-area: facts;
-  background-color: #c8af86;
-  padding: 15px;
-  border-radius: 8px;
-  color: #1e100d;
-}
-
-.facts h2 {
-  font-size: 25px;
-}
-
-.footer {
-  grid-area: footer;
-  background-color: #1d0f0e;
-  color: #c8af86;
-  text-align: center;
-  padding: 15px;
-  border-radius: 5px;
-}
+.about { grid-area: about; }
+.education { grid-area: education; }
+.course { grid-area: course; }
+.experience { grid-area: experience; }
+.hobbies { grid-area: hobbies; }
+.goals { grid-area: goals; }
 
 @media (min-width: 600px) {
-  .header { grid-area: 1 / span 6; }
-  .menu { grid-area: 2 / span 1; }
-  .content { grid-area: 2 / span 4; }
-  .facts { grid-area: 3 / span 6; }
-  .footer { grid-area: 4 / span 6; }
+  .grid-container {
+    grid-template-areas:
+      "about about"
+      "education education"
+      "course experience"
+      "hobbies goals";
+  }
 }
 
-@media (min-width: 768px) {
-  .header { grid-area: 1 / span 6; }
-  .menu { grid-area: 2 / span 1; }
-  .content { grid-area: 2 / span 4; }
-  .facts { grid-area: 2 / span 1; }
-  .footer { grid-area: 3 / span 6; }
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template-areas:
+      "about education"
+      "experience course"
+      "hobbies goals";
+  }
 }
