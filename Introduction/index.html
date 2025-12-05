@@ -1,92 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+    body {
+        background-color: #f3e5d0;
+        font-family: "Times New Roman", serif;
+    }
+
+    .header {
+        background-color: #7a5832;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        border-bottom: 5px solid #654321;
+    }
+
+    .section-card {
+        background-color: #d7b894;
+        border: 1px solid #b5946a;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .hero-img {
+        width: 100%;
+        max-width: 420px;
+        display: block;
+        margin: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .footer {
+        background-color: #7a5832;
+        color: white;
+        padding: 12px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .navbar-custom {
+        background-color: #9c7548;
+        border-bottom: 3px solid #6b4b2b;
+    }
+
+    .navbar-brand, .nav-link {
+        color: white !important;
+        font-size: 20px;
+    }
+
+    .nav-link:hover {
+        color: #ffe9c6 !important;
+    }
+
+    .btn-brown {
+        background-color: #8a633c;
+        color: white;
+        border: none;
+    }
+
+    .btn-brown:hover {
+        background-color: #6b4b2b;
+        color: white;
+    }
+
+    .shadow-sm-custom {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+</style>
 </head>
+
 <body>
 
 
+<nav class="navbar navbar-expand-lg navbar-custom shadow-sm-custom">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold">My Profile</a>
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">IT Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Goals</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
 <div class="header">
-  <h1>Personal Profile Web Page - Raiza Juvida</h1>
+    <h1>Personal Profile Web Page - Raiza Juvida</h1>
 </div>
 
-<div class="section hero">
-    <h2>About Me</h2>
-  <img src="https://i.pinimg.com/736x/c2/dc/98/c2dc9805037622f8f9b7d49fc7f93b84.jpg" width="600" height="450">
-  <p>
-    I’m a fun and easygoing person who really enjoys having real, face-to-face conversations with the people closest to me. I love deep talks with my family and friends, whether about the Gospel or everyday stories.
-  </p>
-  <p>
-    I also love traveling, sipping coffee with a nice view, playing guitar, singing, drawing, and I’m currently learning how to dance. Music keeps me inspired.
-  </p>
+<div class="container mt-4">
+
+    
+    <div class="section-card mb-4 text-center">
+        <h2>About Me</h2>
+        <img src="https://i.pinimg.com/736x/c2/dc/98/c2dc9805037622f8f9b7d49fc7f93b84.jpg" class="hero-img mb-3">
+
+        <p>I’m a fun and easygoing person who enjoys face-to-face conversations, especially deep talks with family and friends.</p>
+
+        <p>I love traveling, drinking coffee with a nice view, playing guitar, singing, drawing, and learning how to dance.</p>
+
+        <button class="btn btn-brown mt-2">See More</button>
+    </div>
+
+    
+    <div class="section-card mb-4">
+        <h2>Education / Achievements</h2>
+        <ul>
+            <li>Consistent honors student (JHS–SHS)</li>
+            <li>Currently 2nd Year BSIT</li>
+        </ul>
+
+        <label class="fw-bold">Academic Progress</label>
+        <div class="progress">
+            <div class="progress-bar" style="width:60%; background-color:#7a5832;">60%</div>
+        </div>
+    </div>
+
+   
+    <div class="section-card mb-4">
+        <h2>Course</h2>
+        <ul>
+            <li>Bachelor of Science in Information Technology (BSIT)</li>
+        </ul>
+    </div>
+
+   
+    <div class="section-card mb-4">
+        <h2>IT Experience</h2>
+        <ul>
+            <li>Website creation</li>
+            <li>Basic app development</li>
+            <li>Software troubleshooting</li>
+            <li>Joining tech workshops</li>
+        </ul>
+    </div>
+
+   
+    <div class="section-card mb-4">
+        <h2>Hobbies & Interests</h2>
+        <ul>
+            <li>Guitar</li>
+            <li>Drawing</li>
+            <li>Singing</li>
+        </ul>
+
+        <button class="btn btn-brown">My Artworks</button>
+    </div>
+
+    
+    <div class="section-card mb-4">
+        <h2>Goals in Life / Dream</h2>
+        <ul>
+            <li>To succeed in IT while staying grounded</li>
+            <li>To build a life filled with creativity, music, and real connections</li>
+        </ul>
+    </div>
+
+    
+    <div class="section-card mb-4">
+        <h3 class="text-center mb-3">Responsive Auto Layout Columns</h3>
+
+        <div class="row mb-2 text-white">
+            <div class="col-md p-3 bg-secondary text-center">1 of 2</div>
+            <div class="col-md p-3 bg-dark text-center">2 of 2</div>
+        </div>
+
+        <div class="row text-white">
+            <div class="col-md p-3 bg-secondary text-center">1 of 4</div>
+            <div class="col-md p-3 bg-dark text-center">2 of 4</div>
+            <div class="col-md p-3 bg-secondary text-center">3 of 4</div>
+            <div class="col-md p-3 bg-dark text-center">4 of 4</div>
+        </div>
+    </div>
+
 </div>
 
-<div class="section">
-  <h2>Education / Achievements</h2>
-  <ul>
-    <li>Consistent honors student from JHS to SHS</li>
-    <li>Currently in 2nd year college (BSIT)</li>
-  </ul>
+<div class="footer">
+    <p>Resize the browser window to see the responsive effect.</p>
 </div>
-
-<div class="section">
-  <h2>Course</h2>
-  <ul>
-    <li>Bachelor of Science in Information Technology (BSIT)</li>
-  </ul>
-</div>
-
-<div class="section">
-  <h2>IT Experience</h2>
-  <ul>
-    <li>Experience creating websites, basic apps, troubleshooting software</li>
-    <li>Joined workshops and tech activities</li>
-  </ul>
-</div>
-
-<div class="section">
-  <h2>Hobbies & Interests</h2>
-  <ul>
-    <li>Guitar, drawing, singing</li>
-  </ul>
-</div>
-
-<div class="section">
-  <h2>Goals in Life / Dream</h2>
-  <ul>
-    <li>To succeed in IT while staying grounded and purpose-driven</li>
-    <li>To build a meaningful life filled with creativity, music, and real connections</li>
-  </ul>
-</div>
-
-
-
-<div class="container-fluid mt-3">
-<h1>Responsive Auto Layout Columns</h1>
-<p>In Bootstrap 5, there is an easy way to create equal width columns: just use the <code>.col-md</code> class on a specified number of col elements. Bootstrap will recognize how many columns there are, and each column will get the same width.</p>
-<p>If the screen size is <strong>less than 768px</strong>, the columns will stack horizontally.</p>
-<div class="container-fluid">
-<div class="row">
-<div class="col-md bg-primary text-white">1 of 2</div>
-<div class="col-md bg-dark text-white">2 of 2</div>
-</div>  
-</div>
-<br>
-<div class="container-fluid">
-<div class="row">
-<div class="col-md bg-primary text-white">1 of 4</div>
-<div class="col-md bg-dark text-white">2 of 4</div>
-<div class="col-md bg-primary text-white">3 of 4</div>
-<div class="col-md bg-dark text-white">4 of 4</div>
-</div>  
-</div>
-</div>
-
-<div class="footer"><p>Resize the browser window to see the responsive effect.</p></div>
-
 
 </body>
 </html>
