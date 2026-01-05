@@ -133,12 +133,45 @@ header {
 .hero-content {
     max-width: 800px;
     animation: fadeInUp 1s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-photo-wrapper {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    flex-shrink: 0;
+    animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--max-yellow-red);
+    box-shadow:
+        0 0 0 8px var(--deep-champagne),
+        0 0 30px rgba(241, 185, 61, 0.6),
+        0 0 60px rgba(241, 185, 61, 0.3);
+    transition: var(--transition);
+}
+
+.profile-photo-wrapper:hover .profile-photo {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 0 8px var(--deep-champagne),
+        0 0 40px rgba(241, 185, 61, 0.8),
+        0 0 80px rgba(241, 185, 61, 0.5);
 }
 
 .hero-title {
     font-size: 3.5rem;
     color: var(--deep-champagne);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-weight: 700;
     line-height: 1.2;
 }
@@ -146,8 +179,15 @@ header {
 .hero-subtitle {
     font-size: 1.5rem;
     color: var(--max-yellow-red);
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-weight: 400;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .cta-button {
@@ -163,10 +203,30 @@ header {
     box-shadow: 0 4px 15px rgba(241, 185, 61, 0.3);
 }
 
+.cta-button.cta-primary {
+    background-color: var(--max-yellow-red);
+    color: var(--seal-brown);
+}
+
+.cta-button.cta-secondary {
+    background-color: transparent;
+    color: var(--deep-champagne);
+    border: 2px solid var(--deep-champagne);
+}
+
 .cta-button:hover {
-    background-color: var(--deep-champagne);
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(241, 185, 61, 0.4);
+}
+
+.cta-button.cta-primary:hover {
+    background-color: var(--deep-champagne);
+}
+
+.cta-button.cta-secondary:hover {
+    background-color: var(--max-yellow-red);
+    color: var(--seal-brown);
+    border-color: var(--max-yellow-red);
 }
 
 .cta-button:active {
@@ -553,6 +613,15 @@ footer {
     }
 }
 
+@keyframes glow-pulse {
+    0%, 100% {
+        filter: drop-shadow(0 0 30px rgba(241, 185, 61, 0.6));
+    }
+    50% {
+        filter: drop-shadow(0 0 50px rgba(241, 185, 61, 0.9));
+    }
+}
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
@@ -585,12 +654,26 @@ footer {
         display: none;
     }
 
+    .profile-photo-wrapper {
+        width: 160px;
+        height: 160px;
+    }
+
     .hero-title {
         font-size: 2.5rem;
     }
 
     .hero-subtitle {
         font-size: 1.2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-button {
+        width: 100%;
     }
 
     .section-title {
