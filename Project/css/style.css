@@ -110,11 +110,11 @@ header {
 .menu-toggle {
     display: none;
     flex-direction: column;
-    gap: 5px;
+    gap: 9px;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 5px;
+    padding: 9px;
 }
 
 .menu-toggle span {
