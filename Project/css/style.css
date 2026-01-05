@@ -43,20 +43,25 @@ header {
 }
 
 .nav-container {
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 3);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 70px;
 }
 
 .logo {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: var(--max-yellow-red);
     letter-spacing: 0.5px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: calc(var(--spacing-unit) * 4);
 }
 
 .nav-links {
@@ -78,10 +83,10 @@ header {
 .nav-link::after {
     content: '';
     position: absolute;
-    top: 10%;
     bottom: 0;
-    left: 15px;
-    right: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
     height: 2px;
     background-color: var(--max-yellow-red);
     transform: scaleX(0);
