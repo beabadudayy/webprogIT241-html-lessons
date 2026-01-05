@@ -43,25 +43,20 @@ header {
 }
 
 .nav-container {
-    max-width: 1400px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 3);
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 70px;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: var(--max-yellow-red);
     letter-spacing: 0.5px;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: calc(var(--spacing-unit) * 4);
 }
 
 .nav-links {
@@ -83,13 +78,14 @@ header {
 .nav-link::after {
     content: '';
     position: absolute;
+    top: 10%;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
+    left: 15px;
+    right: 15px;
     height: 2px;
     background-color: var(--max-yellow-red);
-    transition: width var(--transition-speed);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .nav-link:hover {
@@ -114,10 +110,11 @@ header {
 .menu-toggle {
     display: none;
     flex-direction: column;
+    gap: 9px;
     background: none;
-    border: none;
+    border: 1px;
     cursor: pointer;
-    padding: calc(var(--spacing-unit) * 1);
+    padding: 9px;
 }
 
 .menu-toggle span {
@@ -126,7 +123,7 @@ header {
     height: 7px;
     background-color: var(--max-yellow-red);
     transition: var(--transition);
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .hero-section {
