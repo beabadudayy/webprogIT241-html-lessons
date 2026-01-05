@@ -630,43 +630,6 @@ footer {
 
 
 @media (max-width: 768px) {
-  .nav-container {
-    min-height: auto; /* 👈 Prevents height constraint */
-    padding: 15px 20px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    background-color: var(--seal-brown);
-    position: fixed;
-    top: 70px; /* 👈 Starts below header */
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    padding: 20px 0;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transform: translateY(-100%);
-    transition: transform 0.3s ease;
-  }
-
- .nav-link {
-    width: 100%;
-    text-align: left;
-    padding: 12px 20px;
-    border-radius: 0;
-  }
-
-  .nav-link::after {
-    left: 20px;
-    right: 20px;
-  }
-}
-
-
-
-@media (max-width: 768px) {
     .menu-toggle {
         display: flex;
     }
