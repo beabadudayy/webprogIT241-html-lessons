@@ -89,8 +89,7 @@ header {
     width: 0;
     height: 2px;
     background-color: var(--max-yellow-red);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
+    transition: width var(--transition-speed);
 }
 
 .nav-link:hover {
@@ -115,11 +114,10 @@ header {
 .menu-toggle {
     display: none;
     flex-direction: column;
-    gap: 9px;
     background: none;
-    border: 1px;
+    border: none;
     cursor: pointer;
-    padding: 9px;
+    padding: calc(var(--spacing-unit) * 1);
 }
 
 .menu-toggle span {
