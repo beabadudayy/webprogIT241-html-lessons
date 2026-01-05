@@ -80,6 +80,7 @@ header {
     content: '';
     position: absolute;
     top: 100%;
+    bottom: 0;
     left: 15px;
     right: 15px;
     height: 2px;
